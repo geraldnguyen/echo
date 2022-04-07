@@ -48,17 +48,6 @@ class EchoControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    @Disabled
-    void canCaptureHashFragment() throws Exception {
-        mockMvc.perform(get(ECHO_PATH + "#abc"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("hash", is("abc")))
-                // TODO: more verification
-        ;
-
-    }
-
     @Nested
     class TestHttpMethod {
         @Test
