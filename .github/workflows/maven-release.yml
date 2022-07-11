@@ -18,9 +18,6 @@ jobs:
         with:
           java-version: '11'
 
-      - name: Clean
-        run: mvn clean
-
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v3
         with:
@@ -33,7 +30,7 @@ jobs:
           gpg-passphrase: GPG_PASSPHRASE
 
       - name: Deploy to maven
-        run: mvn deploy -P release
+        run: mvn clean deploy -P release
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
