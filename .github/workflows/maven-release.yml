@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_Deploy:
+  Deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,5 +27,5 @@ jobs:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
 
-      - name: Build with Maven
-        run: mvn deploy
+      - name: Deploy to maven
+        run: mvn deploy -DskipTests=true

@@ -86,6 +86,9 @@
 								</goals>
 							</execution>
 						</executions>
+						<configuration>
+							<passphrase>${gpg.passphrase}</passphrase>
+						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
