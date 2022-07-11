@@ -3,7 +3,7 @@ name: Build and deploy JAR library Maven repository
 on:
   push:
     branches:
-      - main
+      - feature/1-release-as-a-library
   workflow_dispatch:
 
 jobs:
