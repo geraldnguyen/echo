@@ -31,7 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
 
-    
     steps:
       - name: Build with Maven
         run: mvn deploy
