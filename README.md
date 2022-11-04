@@ -19,15 +19,17 @@ pom.xml
 <dependency>
    <groupId>io.github.geraldnguyen</groupId>
    <artifactId>echo</artifactId>
-   <version>0.0.2</version>
+   <version>1.0.0</version>
 </dependency>
 ```
 
 EchoServerApplication.java
 
 ```java
+import nguyen.gerald.echo.EnableEchoController;
+
 @SpringBootApplication
-@ComponentScan("nguyen.gerald.echo")
+@EnableEchoController
 public class EchoServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EchoServerApplication.class, args);
